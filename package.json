@@ -1,0 +1,24 @@
+{
+  "name": "webmcp-crawler",
+  "version": "0.1.0",
+  "description": "CLI tool to detect whether a website serves a WebMCP manifest",
+  "bin": {
+    "webmcp-crawler": "dist/webmcp-crawler.js"
+  },
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node18 --format=esm --banner:js='#!/usr/bin/env node' --outfile=dist/webmcp-crawler.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "type": "module",
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  },
+  "license": "MIT"
+}
